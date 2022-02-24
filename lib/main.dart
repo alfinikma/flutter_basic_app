@@ -48,45 +48,84 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
             decoration:BoxDecoration(),
             margin: EdgeInsets.all(12),
-            child: Text("BERITA TERBARU",style: TextStyle(fontSize:15),),
+            child: Text("BERITA TERBARU",style: TextStyle(fontSize:14),),
             ),
             Container(
             decoration:BoxDecoration(),
             margin: EdgeInsets.all(12),
-            child: Text("PERTANDINGAN HARI INI",style: TextStyle(fontSize:15),),
+            child: Text("PERTANDINGAN HARI INI",style: TextStyle(fontSize:14),),
             ),
         ]
         ),
          Container( 
             decoration: BoxDecoration(
+              border: Border(
+              top: BorderSide(width: 0, color: Colors.purpleAccent),
+              bottom: BorderSide(width: 0, color: Colors.purpleAccent),
+    ),
               color: Colors.purpleAccent,              
             ),
-            margin: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(5),
             padding: const EdgeInsets.all(0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
                     Expanded(child: Image.network("https://asset.kompas.com/crops/zuedycwwFDEGyJchzq0LTPLFqAc=/170x0:895x484/750x500/data/photo/2019/07/27/5d3ba98ca67ed.jpg",
-                    fit : BoxFit.fill, height: 220,
+                    fit : BoxFit.fill, height: 170,
                     ),
                     )
                 ]),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top:10),
-                      child: Text("Costa Mendekat Ke Pelmeiras", style: TextStyle(color: Colors.white )),
+                      margin: const EdgeInsets.only(top:0,bottom: 5),
+                      child: Text("Costa Mendekat Ke Pelmeiras", style: TextStyle(backgroundColor: Colors.white,fontSize: 16.0,fontWeight: FontWeight.bold)),
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      margin: const EdgeInsets.only(left:10,bottom: 10),
+                      child: Text("Transfer", style: TextStyle(color: Colors.black ),),
                     )
+                    
                   ],
                 )
               ],
               ),
- ) 
-        ],
+ ) ,
+ Container( 
+            decoration: BoxDecoration(
+              color: Colors.white,      
+              border: Border(
+              top: BorderSide(width: 0, color: Colors.purpleAccent),
+              bottom: BorderSide(width: 0, color: Colors.purpleAccent),
+              left: BorderSide(width: 0, color: Colors.purpleAccent),
+              right: BorderSide(width: 0, color: Colors.purpleAccent),
+
+    ),        
+            ),
+            margin: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(0),
+            child: Column(
+              
+              children: [
+                Row(
+                 crossAxisAlignment : CrossAxisAlignment.start,
+                  children: [                   
+                    Expanded(child: Image.network("https://media.suara.com/pictures/653x366/2021/02/18/72124-gerard-pique-dan-antoine-griezmann-saat-terlibat-cekcok-di-laga-barcelona-vs-psg.jpg",
+                    fit : BoxFit.fitHeight, height: 100,width: 300, alignment: Alignment.centerLeft,
+                    ),
+                    ),
+                    Text("Pique Bilang Wasit Untungkan Madrid, Koeman Tepuk Jidat"),
+                ]),
+              ],
+              
+ ),
+ )
+        ],        
       )  
     );
   }
