@@ -40,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: 
+      
       Column(
         children: <Widget>[
       Row(
@@ -113,18 +114,76 @@ class _MyHomePageState extends State<MyHomePage> {
               
               children: [
                 Row(
-                 crossAxisAlignment : CrossAxisAlignment.start,
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [                   
                     Expanded(child: Image.network("https://media.suara.com/pictures/653x366/2021/02/18/72124-gerard-pique-dan-antoine-griezmann-saat-terlibat-cekcok-di-laga-barcelona-vs-psg.jpg",
-                    fit : BoxFit.fitHeight, height: 100,width: 300, alignment: Alignment.centerLeft,
+                    fit : BoxFit.fill, height: 100,width: 300, alignment: Alignment.centerLeft,
                     ),
                     ),
-                    Text("Pique Bilang Wasit Untungkan Madrid, Koeman Tepuk Jidat"),
+                    Text("Pique Bilang Wasit Untungkan Madrid,"),
+                    
+                    Text("Koeman Tepuk Jidat"),
                 ]),
-              ],
-              
+              ],          
  ),
- )
+ ),
+ Container( 
+            decoration: BoxDecoration(
+              color: Colors.white,      
+              border: Border(
+              top: BorderSide(width: 0, color: Colors.purpleAccent),
+              bottom: BorderSide(width: 0, color: Colors.purpleAccent),
+              left: BorderSide(width: 0, color: Colors.purpleAccent),
+              right: BorderSide(width: 0, color: Colors.purpleAccent),
+
+    ),        
+            ),
+            margin: const EdgeInsets.only(top: 0),
+            padding: const EdgeInsets.all(6),
+            child: Column(
+              
+              children: [
+                Row(
+                 mainAxisAlignment: MainAxisAlignment.start,
+                  children: [                   
+                    
+                    Text("Barcelona Feb 13, 2021"),
+                ]),
+              ], 
+                       
+ ),
+ ),
+ Container( 
+            decoration: BoxDecoration(
+              color: Colors.white,      
+              border: Border(
+              top: BorderSide(width: 0, color: Colors.purpleAccent),
+              bottom: BorderSide(width: 0, color: Colors.purpleAccent),
+              left: BorderSide(width: 0, color: Colors.purpleAccent),
+              right: BorderSide(width: 0, color: Colors.purpleAccent),
+
+    ),        
+            ),
+            margin: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(0),
+            child: Column(
+              
+              children: [
+                Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [                   
+                    Expanded(child: Image.network("https://media.suara.com/pictures/653x366/2021/02/18/72124-gerard-pique-dan-antoine-griezmann-saat-terlibat-cekcok-di-laga-barcelona-vs-psg.jpg",
+                    fit : BoxFit.fill, height: 100,width: 300, alignment: Alignment.centerLeft,
+                    ),
+                    ),
+                    Text("Pique Bilang Wasit Untungkan Madrid,"),
+                    
+                    Text("Koeman Tepuk Jidat"),
+                ]),
+              ], 
+                       
+ ),
+ ),
         ],        
       )  
     );
